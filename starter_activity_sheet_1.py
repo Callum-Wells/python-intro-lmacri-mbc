@@ -7,4 +7,5 @@ input("Do you like programming " + name + "? ")
 if input == 'yes':
     print("Great! You said yes!")
 print("Let's learn some Python today")
+print()
 
