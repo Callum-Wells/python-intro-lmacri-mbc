@@ -1,11 +1,11 @@
 # starter program lesson 1
 
-name = "Sum Gai"
+name = "Callum Wells"
 print("We want to know if you like progamming!")
 print()
-print("Do you like programming " + name + "?")
-answer = input()
-print("Great! You said " + answer + "!")
+input("Do you like programming " + name + "? ")
+if input == 'yes':
+    print("Great! You said yes!")
 print("Let's learn some Python today")
 
 

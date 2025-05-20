@@ -91,5 +91,3 @@ def question():
     print()
 
 question()
-
-   
