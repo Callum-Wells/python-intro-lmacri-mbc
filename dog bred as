@@ -1,12 +1,54 @@
-welcome = print('Welcome to the Dog Breed Selector!')
+#convert int to string and return it
+#question is what we'll ask the user to input
+#max num is the max range
+
+def validate_input(question, max_num):
+    while True:
+        try:
+            ans = input(f'{question} ')
+            num = int(ans)
+            if 1 <= num <= max_num:
+                break
+        except ValueError:
+            print('Please check your input... ')
+
+    return num
+        
+
+#Welcome the user
+
+print('Welcome to the Dog Breed Selector!')
+
+#Ask the users name and store
+
 name = input('What is your name? ')
+
+#declare breed variables
+
 breeds = ["Labrador", "German Shepherd", "Beagle", "Bulldog", "Poodle"]
 print('Available dog breeds:')
+
+#loop the breeds the user can choose from
 i = 1
 for breed in breeds:
     print(f'{i}. {breed}')
     i = i + 1
-num = input('Enter number of your preferred breed: ')
-preferred_age = input('Enter preferred age of dog (1-15)')
 
+#Get users preffered breed
+
+pref_breed = validate_input('Enter number of your preferred breed: ', 5)
+
+#get user for dog age and store
+
+breed_age = validate_input('Enter preferred age of dog (1-15): ', 15)
+
+#output for final message
+
+print()
+print(f'Thank you, {name}!')
+print(f"You prefer a {breeds[pref_breed - 1]} that is about {breed_age} years old.")
+print('Good luck finding your fluffy friend!')
+
+    
  
+    
